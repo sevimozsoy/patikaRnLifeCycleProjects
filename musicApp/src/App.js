@@ -10,7 +10,9 @@ function App() {
   
   const renderSong = ({item}) => <SongCard song={item}/>   //gelen item objesi json formatında olduğundan dolayı objeyi parçalamak için bir kere daha süslü paranteze alınmalı
   const renderSeparator = () => <View style={styles.separator}></View>
+  
   const [songData, setSongData] = useState(music_data);
+  
   const handleSearch = text => {
     const filteredSong = music_data.filter(song => {
       const searchedSong = text.toLowerCase();
